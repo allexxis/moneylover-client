@@ -1,7 +1,7 @@
 {
-  "name": "moneylover-cli",
-  "version": "0.5.1",
-  "description": "A CLI tool for Money Lover.",
+  "name": "moneylover-client",
+  "version": "0.0.1",
+  "description": "Money lover client library for Money Lover.",
   "main": "src/index.js",
   "bin": {
     "moneylover": "src/index.js"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leMaik/moneylover-cli.git"
+    "url": "git+https://github.com/allexxis/moneylover-client.git"
   },
   "keywords": [
     "cli",
@@ -20,9 +20,9 @@
   "author": "Maik Marschner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leMaik/moneylover-cli/issues"
+    "url": "https://github.com/allexxis/moneylover-client/issues"
   },
-  "homepage": "https://github.com/leMaik/moneylover-cli#readme",
+  "homepage": "https://github.com/allexxis/moneylover-client#readme",
   "dependencies": {
     "chalk": "^2.4.1",
     "chrome-launcher": "^0.15.0",
@@ -34,7 +34,6 @@
     "inquirer": "^6.0.0",
     "jsonwebtoken": "^8.2.1",
     "popsicle": "^9.2.0",
-    "readline-sync": "^1.4.9",
-    "yargs": "^15.1.0"
+    "readline-sync": "^1.4.9"
   }
 }
