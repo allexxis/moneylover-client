@@ -14,7 +14,8 @@
     "url": "git+https://github.com/allexxis/moneylover-client.git"
   },
   "keywords": [
-    "cli",
+    "api",
+    "client",
     "moneylover"
   ],
   "author": "Alexis Valenciano",
