@@ -1,6 +1,8 @@
 const chrono = require('chrono-node');
 const { getMoneyLover } = require('../util');
 const MoneyLover = require('../moneylover');
+const debug = process.env.DEBUG === 'true';
+
 /**
  * Income Type
  * @typedef {Object} Expense
@@ -31,15 +33,16 @@ module.exports = async ({ wallet, amount, category, note, date }) => {
    if (wallet == null) {
       throw new Error('wallet amount cant be undefined');
    }
-   const wallet = wallets.find(
-      ({ _id, name }) => _id === wallet || name === wallet
+   wallet = wallets.find(
+      ({ _id, name }) => _id === wallet || name.split(' ').join('') === wallet
    );
+   console.log(wallet);
    const categories = await ml.getCategories(wallet._id);
 
    if (category == null) {
       throw new Error('category amount cant be undefined');
    }
-   let category =
+   category =
       category != null &&
       categories.find(
          ({ name, type, _id }) =>

@@ -33,6 +33,7 @@ module.exports = async ({ wallet, amount, category, note, date }) => {
    if (wallet == null) {
       throw new Error('wallet amount cant be undefined');
    }
+   console.log(wallets);
    wallet = wallets.find(
       ({ _id, name }) => _id === wallet || name.split(' ').join('') === wallet
    );

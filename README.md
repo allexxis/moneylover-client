@@ -10,6 +10,18 @@ npm i  moneylover-client
 ```
 
 ## Usage
+
+### Debug
+
+To activate debug mode you can set environmental variable DEBUG to true this can be set at your run command or the environmental in your own computer.
+This will log all request with a message with the data or problem in the request similar to moneylover-cli
+
+```
+DEBUG=true node inde.js 
+```
+
+
+
 ### Authentication
 
 #### Using a MoneyLover account

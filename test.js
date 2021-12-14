@@ -1,7 +1,7 @@
 const { income } = require('./src');
 const start = async () => {
    const transaction = await income({
-      wallet: 'BACCOLONES',
+      wallet: 'CRYPTOSTATS',
       amount: 1000,
       category: 'INCOME',
       note: undefined,
