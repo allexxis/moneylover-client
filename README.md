@@ -37,6 +37,19 @@ start();
 
 ```
 
+### Wallets
+
+This shows how to request your account wallets
+
+```javascript
+const {  wallets } = require('./src');
+const start = async () => {
+   const wallet = await wallets();
+   console.log(wallet);
+};
+start();
+```
+
 
 
 [moneylover]: https://moneylover.me/

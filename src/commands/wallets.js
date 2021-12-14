@@ -1,6 +1,6 @@
 const { getMoneyLover } = require('../util');
 const debug = process.env.DEBUG === 'true';
-module.exports.handler = async () => {
+module.exports = async () => {
    try {
       const ml = await getMoneyLover();
       const wallets = await ml.getWallets();
