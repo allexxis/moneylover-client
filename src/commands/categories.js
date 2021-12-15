@@ -7,7 +7,6 @@ const MoneyLover = require('../moneylover');
  * @property {string} wallet - The name of the wallet
  * @property {boolean} income  - Set to true if you want to fetch income categories; set true by default
  * @property {boolean} expense  -  Set to true if you want to fetch expense categories; set true by default
- * @property {Date} date  - A note for the transaction
  */
 /**
  * Creates an income transaction
