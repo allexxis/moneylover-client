@@ -1,6 +1,26 @@
 const chrono = require('chrono-node');
 const { getMoneyLover } = require('../util');
 const MoneyLover = require('../moneylover');
+
+/**
+ * Income Type
+ * @typedef {Object} TranactionsOptions
+ * @property {string} wallet - The name of the wallet
+ * @property {boolean} income  - Set to true if you want to fetch income transactions; set true by default
+ * @property {boolean} expense  -  Set to true if you want to fetch expense transactions; set true by default
+ * @property {Date} startDate  -  Starting date to filter with format MM/DD/YYYY
+ * @property {Date} endDate  -  Ending date to filter with format MM/DD/YYYY
+ */
+/**
+ * Creates an income transaction
+ *
+ * @param {TranactionsOptions} options - The name of the wallet
+ * @return {Promise<any>}  Returns transacion if success undefined when error
+ *
+ * @example
+ *
+ *     const transaction = await categories({ wallet:"US", income:true, expense:true });
+ */
 module.exports = async ({
    wallet,
    startDate,
