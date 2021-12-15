@@ -14,7 +14,7 @@ npm i  moneylover-client
 ### Debug
 
 To activate debug mode you can set environmental variable DEBUG to true this can be set at your run command or the environmental in your own computer.
-This will log all request with a message with the data or problem in the request similar to moneylover-cli
+This will log all request with a message with the data or problem in the request similar to moneylover-cli.d
 
 ```
 DEBUG=true node index.js 
@@ -22,14 +22,14 @@ DEBUG=true node index.js
 
 ### Notes 
 
-Important **wallet** **param** on all functions should be specified without white spaces i remove the white spaces to avoid having error when trying to find wallets in the account.
+Important **wallet** **param** on all functions should be specified without white spaces, I removed the white spaces to avoid  errors when trying to find wallets in the account.
 
 ### Authentication
 
 #### Using a MoneyLover account
 If you are using a Money Lover account for login, you can log in with the following code.
 
-Login function is needed before using any of the other functions in the library
+Login function is needed before using any of the other functions in the library.
 
 ```javascript
 const { login } = require('moneylover-client');
@@ -43,7 +43,7 @@ start();
 
 ### Wallets
 
-This shows how to request your account wallets
+This shows how to request your account wallets.
 
 ```javascript
 const {  wallets } = require('moneylover-client');
@@ -56,7 +56,7 @@ start();
 
 ### Categories
 
-Recommended to pass a **wallet** param otherwise more than 258 categories will be fetch as default
+Recommended to pass a **wallet** param otherwise more than 258 categories will be fetch as default.
 
 ```javascript
 const { categories } = require('moneylover-client');
@@ -70,7 +70,7 @@ start();
 
 ### Transactions
 
-This example shows how to get transactions from all wallets if **wallet** is provided then transactions will be filter by the wallet specified
+This example shows how to get transactions from all wallets if **wallet** is provided then transactions will be filter by the wallet specified.
 
 ```javascript
 const { transactions } = require('moneylover-client');
@@ -88,7 +88,7 @@ start();
 
 ### Create Income
 
-This example shows how to get transactions from all wallets if **wallet** is provided then transactions will be filter by the wallet specified
+This example shows how to get transactions from all wallets if **wallet** is provided then transactions will be filter by the wallet specified.
 
 ```javascript
 const { income } = require('moneylover-client');
@@ -108,7 +108,7 @@ start();
 
 ### Create Expense
 
-This example shows how to get transactions from all wallets if **wallet** is provided then transactions will be filter by the wallet specified
+This example shows how to get transactions from all wallets if **wallet** is provided then transactions will be filter by the wallet specified.
 
 ```javascript
 const { expense } = require('moneylover-client');
