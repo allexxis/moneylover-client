@@ -34,6 +34,7 @@ module.exports = async ({
    income = true,
    expense = true,
 }) => {
+   wallet = wallet.split(' ').join('');
    const ml = await getMoneyLover();
    const wallets = await ml.getWalletNames();
    let walletId = 'all';

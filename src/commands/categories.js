@@ -19,6 +19,7 @@ const MoneyLover = require('../moneylover');
  *     const transaction = await categories({ wallet:"US", income:true, expense:true });
  */
 module.exports = async ({ wallet, income = true, expense = true }) => {
+   wallet = wallet.split(' ').join('');
    const ml = await getMoneyLover();
    const wallets = await ml.getWalletNames();
    const categories = [];
@@ -26,7 +27,6 @@ module.exports = async ({ wallet, income = true, expense = true }) => {
       for (const wallet of wallets) {
          const fetchedCategories = await ml.getCategories(wallet._id);
          categories.push(...fetchedCategories);
-         console.log(categories);
       }
    };
    wallet = wallets.find(

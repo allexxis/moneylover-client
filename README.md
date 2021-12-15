@@ -20,7 +20,9 @@ This will log all request with a message with the data or problem in the request
 DEBUG=true node index.js 
 ```
 
+### Notes 
 
+Important **wallet** **param** on all functions should be specified without white spaces i remove the white spaces to avoid having error when trying to find wallets in the account.
 
 ### Authentication
 
@@ -78,6 +80,46 @@ const start = async () => {
       endDate: '12/01/2021',
    });
    console.log(trans);
+};
+start();
+
+
+```
+
+### Create Income
+
+This example shows how to get transactions from all wallets if **wallet** is provided then transactions will be filter by the wallet specified
+
+```javascript
+const { income } = require('moneylover-client');
+const start = async () => {
+   const transaction = await income({
+      amount: 1000,
+      category: 'INCOME',
+      date: '12/14/2021',
+      wallet: 'CHEKINGSUS',
+   });
+   console.log(transaction);
+};
+start();
+
+
+```
+
+### Create Expense
+
+This example shows how to get transactions from all wallets if **wallet** is provided then transactions will be filter by the wallet specified
+
+```javascript
+const { expense } = require('moneylover-client');
+const start = async () => {
+   const transaction = await expense({
+      amount: 1000,
+      category: 'EXPENSE',
+      date: '12/14/2021',
+      wallet: 'CHEKINGSUS',
+   });
+   console.log(transaction);
 };
 start();
 

@@ -23,6 +23,7 @@ const debug = process.env.DEBUG === 'true';
  *     const transaction = await income({ wallet:"US", amount:1000, category:"INCOME", note, date:"MM/DD/YYYY" });
  */
 module.exports = async ({ wallet, amount, category, note, date }) => {
+   wallet = wallet.split(' ').join('');
    const ml = await getMoneyLover();
    const wallets = await ml.getWalletNames();
 
@@ -33,7 +34,6 @@ module.exports = async ({ wallet, amount, category, note, date }) => {
    if (wallet == null) {
       throw new Error('wallet amount cant be undefined');
    }
-   console.log(wallets);
    wallet = wallets.find(
       ({ _id, name }) => _id === wallet || name.split(' ').join('') === wallet
    );
