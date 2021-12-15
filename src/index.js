@@ -5,6 +5,7 @@ const expense = require('./commands/expense');
 const moneylover = require('./moneylover');
 const wallets = require('./commands/wallets');
 const logout = require('./commands/logout');
+const transactions = require('./commands/transactions');
 
 module.exports = {
    login,
@@ -14,4 +15,5 @@ module.exports = {
    expense,
    wallets,
    logout,
+   transactions,
 };
