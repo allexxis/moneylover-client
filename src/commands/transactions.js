@@ -5,7 +5,7 @@ const MoneyLover = require('../moneylover');
 /**
  * Income Type
  * @typedef {Object} TranactionsOptions
- * @property {string} wallet - The name of the wallet
+ * @property {string} wallet - The name of the wallet is this is null all wallets wil be used to fetch transactions
  * @property {boolean} income  - Set to true if you want to fetch income transactions; set true by default
  * @property {boolean} expense  -  Set to true if you want to fetch expense transactions; set true by default
  * @property {Date} startDate  -  Starting date to filter with format MM/DD/YYYY
@@ -19,7 +19,13 @@ const MoneyLover = require('../moneylover');
  *
  * @example
  *
- *     const transaction = await categories({ wallet:"US", income:true, expense:true });
+ *     const transaction = await income({
+ *       wallet: 'CRYPTOSTATS',
+ *       amount: 1000,
+ *       category: 'INCOME',
+ *       note: undefined,
+ *       date: '12/13/2021',
+ *     });
  */
 module.exports = async ({
    wallet,

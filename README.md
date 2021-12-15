@@ -27,6 +27,8 @@ DEBUG=true node inde.js
 #### Using a MoneyLover account
 If you are using a Money Lover account for login, you can log in with the following code.
 
+Login function is needed before using any of the other functions in the library
+
 ```javascript
 const { login } = require('moneylover-client');
 const start = async () => {
@@ -61,6 +63,24 @@ const start = async () => {
    console.log(cat);
 };
 start();
+
+```
+
+### Transactions
+
+This example shows how to get transactions from all wallets if **wallet** is provided then transactions will be filter by the wallet specified
+
+```javascript
+const { transactions } = require('./src');
+const start = async () => {
+   const trans = await transactions({
+      startDate: '12/01/2021',
+      endDate: '12/01/2021',
+   });
+   console.log(trans);
+};
+start();
+
 
 ```
 
