@@ -1,7 +1,13 @@
 const chrono = require('chrono-node');
 const { getMoneyLover } = require('../util');
 const MoneyLover = require('../moneylover');
-module.exports = async ({ wallet, startDate, endDate, income, expense }) => {
+module.exports = async ({
+   wallet,
+   startDate,
+   endDate,
+   income = true,
+   expense = true,
+}) => {
    const ml = await getMoneyLover();
    const wallets = await ml.getWalletNames();
    let walletId = 'all';
@@ -21,14 +27,21 @@ module.exports = async ({ wallet, startDate, endDate, income, expense }) => {
       chrono.parseDate(startDate),
       chrono.parseDate(endDate)
    );
+   let newTransactions = [];
    if (income) {
-      transactions = transactions.transactions.filter(
-         (t) => t.category.type === MoneyLover.CATEGORY_TYPE_INCOME
-      );
-   } else if (expense) {
-      transactions = transactions.transactions.filter(
-         (t) => t.category.type === MoneyLover.CATEGORY_TYPE_EXPENSE
-      );
+      newTransactions = [
+         ...transactions.transactions.filter(
+            (t) => t.category.type === MoneyLover.CATEGORY_TYPE_INCOME
+         ),
+      ];
+   }
+   if (expense) {
+      newTransactions = [
+         ...newTransactions,
+         ...transactions.transactions.filter(
+            (t) => t.category.type === MoneyLover.CATEGORY_TYPE_EXPENSE
+         ),
+      ];
    } else {
       transactions = transactions.transactions;
    }
