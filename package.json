@@ -1,6 +1,6 @@
 {
   "name": "moneylover-client",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Money lover client library for Money Lover.",
   "main": "src/index.js",
   "bin": {
