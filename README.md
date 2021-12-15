@@ -17,7 +17,7 @@ To activate debug mode you can set environmental variable DEBUG to true this can
 This will log all request with a message with the data or problem in the request similar to moneylover-cli
 
 ```
-DEBUG=true node inde.js 
+DEBUG=true node index.js 
 ```
 
 
