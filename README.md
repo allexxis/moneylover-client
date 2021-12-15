@@ -50,6 +50,20 @@ const start = async () => {
 start();
 ```
 
+### Categories
+
+Recommended to pass a **wallet** param otherwise more than 258 categories will be fetch as default
+
+```javascript
+const { categories } = require('./src');
+const start = async () => {
+   const cat = await categories({});
+   console.log(cat);
+};
+start();
+
+```
+
 
 
 [moneylover]: https://moneylover.me/

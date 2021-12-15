@@ -1,6 +1,6 @@
 const { categories, login } = require('./src');
 const start = async () => {
-   // await login('gabr.933@gmail.com', 'Pckp22tXfQtRrJ');
+   // await login('john@doe.com', 'helloworld');
    // const transaction = await income({
    //    wallet: 'CRYPTOSTATS',
    //    amount: 1000,
