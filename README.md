@@ -44,7 +44,7 @@ start();
 This shows how to request your account wallets
 
 ```javascript
-const {  wallets } = require('./src');
+const {  wallets } = require('moneylover-client');
 const start = async () => {
    const wallet = await wallets();
    console.log(wallet);
@@ -57,7 +57,7 @@ start();
 Recommended to pass a **wallet** param otherwise more than 258 categories will be fetch as default
 
 ```javascript
-const { categories } = require('./src');
+const { categories } = require('moneylover-client');
 const start = async () => {
    const cat = await categories({});
    console.log(cat);
@@ -71,7 +71,7 @@ start();
 This example shows how to get transactions from all wallets if **wallet** is provided then transactions will be filter by the wallet specified
 
 ```javascript
-const { transactions } = require('./src');
+const { transactions } = require('moneylover-client');
 const start = async () => {
    const trans = await transactions({
       startDate: '12/01/2021',
